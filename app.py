@@ -16,7 +16,7 @@ import cv2
 from PIL import Image,ImageOps
 import numpy as np
 def import_and_predict(image_data,model):
-    img = ku.load_img(test_img, target_size = (32,32))
+    img = ku.load_img(image, target_size = (32,32))
     img = ku.img_to_array(img, dtype=np.uint8)
     img = np.array(img)/255.0
     img_reshape=img[np.newaxis,...]
