@@ -16,12 +16,13 @@ import cv2
 from PIL import Image,ImageOps
 import numpy as np
 def import_and_predict(image,model):
-    size=(32,32)
+    size=(64,64)
     image=ImageOps.fit(image,size)
     img=np.asarray(image)
     img_reshape=img[np.newaxis,...]
-    prediction=model.predict(img[np.newaxis,...])
+    prediction=model.predict(img_reshape)
     return prediction
+  
 if file is None:
     st.text("Please upload an image file")
 else:
