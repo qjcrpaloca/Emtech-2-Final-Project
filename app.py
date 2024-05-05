@@ -15,9 +15,9 @@ file=st.file_uploader("Choose photo from computer",type=["jpg","png"])
 import cv2
 from PIL import Image,ImageOps
 import numpy as np
-def import_and_predict(image_data,model):
+def import_and_predict(image,model):
     size=(32,32)
-    image=ImageOps.fit(image_data,size)
+    image=ImageOps.fit(image,size)
     img=np.asarray(image)
     img_reshape=img[np.newaxis,...]
     prediction=model.predict(img[np.newaxis,...])
