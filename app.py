@@ -28,7 +28,7 @@ else:
     image=Image.open(file)
     st.image(image,use_column_width=True)
     # Load the image into the model for prediction
-    prediction = import_and_predict(image_data, model)
+    prediction = import_and_predict(image, model)
     class_names=['cardboard',
                  'glass',
                  'metal',
