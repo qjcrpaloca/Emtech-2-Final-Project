@@ -16,7 +16,12 @@ from PIL import Image,ImageOps
 import numpy as np
 def import_and_predict(image_data,model):
     size=(32,32)
-    image=ImageOps.fit(image_data,size)
+    # Ensure image_data is in the correct data type and range
+    image_data = (image_data * 255).astype(np.uint8)
+    # Convert the NumPy array to an Image instance
+    image = Image.fromarray(image_data)
+    # Use ImageOps.fit with the Image instance
+    image=ImageOps.fit(image,size)
     img=np.asarray(image)
     img_reshape=img[np.newaxis,...]
     prediction=model.predict(img_reshape)
