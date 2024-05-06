@@ -40,5 +40,5 @@ else:
     result_label = class_names[result_class]
     string = f"This image is a: {result_label}"
     st.success(string)
-    string = f"Prediction: {result_class1}"
+    string = f"Prediction: {result_class1}:.2%"
     st.success(string)
