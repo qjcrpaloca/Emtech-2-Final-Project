@@ -25,22 +25,39 @@ def import_and_predict(image,model):
     # Use ImageOps.fit with the Image instance
     image=ImageOps.fit(image,size)
     img=np.asarray(image)
-    img_reshape=img[np.newaxis,...]
+    img = img[:, :, 0]
+    img_reshape = img[np.newaxis, ..., np.newaxis]
     prediction=model.predict(img_reshape)
     return prediction
+  
+def load_image():
+    # Check if the image is grayscale, if so, add a channel dimension
+    if len(img.shape) == 2:
+        img = np.expand_dims(img, axis=-1)
+    
+    img = img / 255.0
+    img = np.reshape(img, (1, 64, 64, img.shape[-1]))
+    return img
   
 if file is None:
     st.text("Please upload an image file")
 else:
     image=Image.open(file)
     st.image(image,use_column_width=True)
-    prediction=import_and_predict(image,model)
+    image_array = img_to_array(image)
+
+    # Normalize the image
+    image_array = image_array / 255.0
+
+    # Load the image into the model for prediction
+    prediction = import_and_predict(image_array, model)
     class_names=['cardboard',
                  'glass',
                  'metal',
                  'paper',
                  'plastic',
                  'trash']
-    string="This image is a : "+np.argmax(prediction)
-    string="This image is a : "+class_names[np.argmax(prediction)]
+    result_class = np.argmax(prediction)
+    result_label = class_names[result_class]
+    string = f"Prediction: {result_label} ({prediction[0][result_class]:.2%} confidence)"
     st.success(string)
