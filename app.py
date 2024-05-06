@@ -35,6 +35,6 @@ else:
                  'paper',
                  'plastic',
                  'trash']
-    string="Probability : "+np.max(prediction[0],axis=-1)
+    string="Probability : "+np.max(prediction)
     string="OUTPUT : "+class_names[np.argmax(prediction)]
     st.success(string)
