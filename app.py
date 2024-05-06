@@ -9,7 +9,8 @@ def load_model():
   return model
 model=load_model()
 st.write("""
-# Garbage Classification"""
+# Garbage Classification\n
+Determines if Cardboard,Glass,Metal,Paper,Plastic, or others(trash)"""
 )
 file=st.file_uploader("Choose photo from computer",type=["jpg","png"])
 
