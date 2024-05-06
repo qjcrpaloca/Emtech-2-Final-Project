@@ -8,7 +8,8 @@ def load_model():
   return model
 model=load_model()
 st.write("""
-# Garbage Classification"""
+# Garbage Classification\n
+Detects Garbage if cardboard,glass,metal,paper,plastic or other(trash)"""
 )
 file=st.file_uploader("Choose photo from computer",type=["jpg","png"])
 
@@ -35,5 +36,5 @@ else:
                  'paper',
                  'plastic',
                  'trash']
-    string="OUTPUT : "+class_names[np.argmax(prediction)]
+    string="This image is a : "+class_names[np.argmax(prediction)]
     st.success(string)
