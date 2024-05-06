@@ -30,7 +30,7 @@ def import_and_predict(image_data,model):
     
     img = img[:, :, 0]
 
-    img_reshape = img[np.newaxis, ..., np.newaxis]
+    img_reshape = img[np.newaxis, ...]
     prediction=model.predict(img_reshape)
     return prediction
 if file is None:
