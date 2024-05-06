@@ -14,7 +14,7 @@ def import_and_predict(image_data, model):
     size = (32, 32)
 
     # Ensure image_data is in the correct data type and range
-    image_data = (image_data * 255).astype(np.uint8)
+    image_data = (image_data / 255).astype(np.uint8)
     # Convert the NumPy array to an Image instance
     image = Image.fromarray(image_data)
     # Use ImageOps.fit with the Image instance
