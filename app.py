@@ -22,8 +22,14 @@ def import_and_predict(image_data,model):
     image = Image.fromarray(image_data)
     # Use ImageOps.fit with the Image instance
     image=ImageOps.fit(image,size)
-    img=np.asarray(image)
-    img_reshape=img[np.newaxis,...]
+    image = Image.fromarray(image_data)
+    # Use ImageOps.fit with the Image instance
+    image = ImageOps.fit(image, size)
+    img = np.asarray(image)
+    
+    img = img[:, :, 0]
+
+    img_reshape = img[np.newaxis, ..., np.newaxis]
     prediction=model.predict(img_reshape)
     return prediction
 if file is None:
@@ -31,7 +37,14 @@ if file is None:
 else:
     image=Image.open(file)
     st.image(image,use_column_width=True)
-    prediction=import_and_predict(image,model)
+    # Convert the image to a NumPy array
+    image_array = img_to_array(image)
+
+    # Normalize the image
+    image_array = image_array / 255.0
+
+    # Load the image into the model for prediction
+    prediction = import_and_predict(image_array, model)
     class_names=['cardboard',
                  'glass',
                  'metal',
