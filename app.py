@@ -33,7 +33,7 @@ else:
                  'paper',
                  'plastic',
                  'trash']
-    result_class = np.argmax(prediction,axis=-1)
+    result_class = np.argmax(prediction[0],axis=-1)
     result_label = class_names[result_class]
     string = f"Prediction: {result_label} ({prediction[0][result_class]:.2%} confidence)"
     st.success(string)
