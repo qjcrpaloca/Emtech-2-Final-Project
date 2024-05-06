@@ -1,5 +1,6 @@
 import streamlit as st
 import tensorflow as tf
+from tensorflow.keras.preprocessing.image import img_to_array
 
 @st.cache(allow_output_mutation=True)
 def load_model():
