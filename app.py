@@ -37,9 +37,9 @@ else:
                  'plastic',
                  'trash']
     result_class = np.argmax(prediction[0],axis=-1)
-    result_class1 = np.max(prediction[0],axis=-1)
+    result_class1 = np.max(prediction[0],axis=-2)
     result_label = class_names[result_class]
     string = f"This image is a: {result_label}"
     st.success(string)
-    string = f"Prediction: {prediction[0][result_class1]:.2%}"
+    string = f"Prediction: {[result_class1]:.2%}"
     st.success(string)
