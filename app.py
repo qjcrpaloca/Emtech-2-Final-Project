@@ -36,7 +36,7 @@ def load_image():
         img = np.expand_dims(img, axis=-1)
     
     img = img / 255.0
-    img = np.reshape(img, (1, 64, 64, img.shape[-1]))
+    img = np.reshape(img, (1, 32, 32, img.shape[-1]))
     return img
 
 model = load_fashion_model()
