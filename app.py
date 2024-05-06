@@ -36,7 +36,7 @@ else:
                  'paper',
                  'plastic',
                  'trash']
-    result_class = np.argmax(prediction[0])
+    result_class = np.argmax(prediction[1])
     result_class1 = np.max(prediction[0])
     result_label = class_names[result_class]
     string = f"This image is a: {result_label}"
