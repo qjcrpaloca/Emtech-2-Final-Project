@@ -30,7 +30,7 @@ else:
     st.image(image,use_column_width=True)
     # Load the image into the model for prediction
     image = ku.img_to_array(image, dtype=np.uint8)
-    image = np.array(img)/255.0
+    image = np.array(image)/255.0
     prediction = import_and_predict(image, model)
     class_names=['cardboard',
                  'glass',
