@@ -26,7 +26,7 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('/main/bg.png')
+set_background('./main/bg.png')
 
 st.title(':green[Trash Classifier App]')
 st.write("""
