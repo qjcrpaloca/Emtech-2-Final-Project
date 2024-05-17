@@ -23,7 +23,8 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title('Trash Classifier App')
 st.divider()
-file=st.file_uploader("Choose photo from computer",type=["jpg","png"])
+st.subheader("Determine pictures if they are: Cardboard. Glass, Metal, Paper, Plastic, or Others(Trash)")
+file=st.file_uploader("Upload photo from computer",type=["jpg","png"])
 
 import cv2
 from PIL import Image,ImageOps
