@@ -23,7 +23,6 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 st.markdown("Application")
 st.sidebar.markdown("# [Application]https://emtech-2-final-project-application.streamlit.app/)")
 st.sidebar.markdown("# [Home](https://emtech-2-final-project-home.streamlit.app/)")
-https://emtech-2-final-project-4qmwdcldtmmsypeousa6lc.streamlit.app/
 
 st.title(':green[Trash Classifier App]')
 st.write("""
