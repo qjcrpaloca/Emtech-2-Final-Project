@@ -21,9 +21,8 @@ background-size: cover;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.markdown("Application")
-st.sidebar.markdown("# Application")
-st.markdown("Application")
-st.sidebar.markdown("# Application")
+st.sidebar.markdown("# [Application](https://emtech-2-final-project-mxksd9s9sspkddyr4gbupk.streamlit.app/)")
+
 
 st.title(':green[Trash Classifier App]')
 st.write("""
