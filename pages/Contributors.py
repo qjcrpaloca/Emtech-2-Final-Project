@@ -24,3 +24,5 @@ st.markdown('# [Facebook](https://web.facebook.com/juanvictor.pescador)')
 st.image('jd.jpg')
 st.header('John Dave Pactor')
 st.markdown('# [Facebook](https://web.facebook.com/Reaper.3502)')
+
+st.page_link('https://www.youtube.com/playlist?list=PLD_NXhmBFaFW6JxOYrbSmh6_kQas11Ss7',icon='🌼')
