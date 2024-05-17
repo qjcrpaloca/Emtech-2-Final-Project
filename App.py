@@ -22,10 +22,7 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
 st.title(':green[Trash Classifier App]')
-st.write("""
-# Garbage Classification\n
-Determines if Cardboard,Glass,Metal,Paper,Plastic, or others(trash)"""
-)
+st.divider("rainbow")
 file=st.file_uploader("Choose photo from computer",type=["jpg","png"])
 
 import cv2
