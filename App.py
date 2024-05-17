@@ -21,7 +21,7 @@ background-size: cover;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-st.title('Trash Classifier App')
+st.title(':lightgreen-background[Trash Classifier Ap]')
 st.divider()
 st.subheader("Determine pictures if they are: Cardboard. Glass, Metal, Paper, Plastic, or Others(Trash)")
 file=st.file_uploader("Upload photo from computer",type=["jpg","png"])
