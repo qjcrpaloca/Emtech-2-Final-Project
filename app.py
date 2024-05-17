@@ -11,16 +11,16 @@ model=load_model()
 
 page_bg_img = f"""
 <style>
-[data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://i.postimg.cc/4xgNnkfX/Untitled-design.png");
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-background-attachment: local;
-}}
-[data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
-}}
+html {
+  --s: 100px; /* control the size */
+  --c1: #4ECDC4;
+  --c2: #556270;
+
+  background: 
+    linear-gradient(-26.56deg,var(--c1) 33%,var(--c2) 33.3% 66.6%,var(--c1) 67%) 
+    0/var(--s) var(--s);
+  /* 26.56deg = arctan(0.5) */
+}
 </style>
 """
 
