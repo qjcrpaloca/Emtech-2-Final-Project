@@ -11,7 +11,7 @@ model=load_model()
 
 page_bg_img = f"""
 <style>
-html {
+[html {
   --s: 100px; /* control the size */
   --c1: #4ECDC4;
   --c2: #556270;
@@ -20,7 +20,7 @@ html {
     linear-gradient(-26.56deg,var(--c1) 33%,var(--c2) 33.3% 66.6%,var(--c1) 67%) 
     0/var(--s) var(--s);
   /* 26.56deg = arctan(0.5) */
-}
+}]
 </style>
 """
 
