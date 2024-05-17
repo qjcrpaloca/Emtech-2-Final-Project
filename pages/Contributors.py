@@ -12,3 +12,4 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title('Contributors')
 st.divider()
+
