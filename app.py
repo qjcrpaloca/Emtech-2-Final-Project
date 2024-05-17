@@ -8,7 +8,7 @@ def load_model():
   model=tf.keras.models.load_model('FineTunedTrashCNN.h5')
   return model
 model=load_model()
-st.title(':blue-background[cool]')
+st.title(':green[Trash Classifier App]')
 st.write("""
 # Garbage Classification\n
 Determines if Cardboard,Glass,Metal,Paper,Plastic, or others(trash)"""
