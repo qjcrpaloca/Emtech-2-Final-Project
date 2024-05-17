@@ -9,10 +9,9 @@ def load_model():
   return model
 model=load_model()
 
-page_bg_img = f"""
+page_bg_img = """
 <style>
-[id="root"] {
-  }
+
 </style>
 """
 
