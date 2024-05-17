@@ -22,6 +22,8 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.markdown("Application")
 st.sidebar.markdown("# Application")
+st.markdown("Application")
+st.sidebar.markdown("# Application")
 
 st.title(':green[Trash Classifier App]')
 st.write("""
