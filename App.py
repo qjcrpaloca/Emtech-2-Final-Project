@@ -21,7 +21,7 @@ background-size: cover;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
-st.title(':green[Trash Classifier App]')
+st.title('Trash Classifier App')
 st.divider()
 file=st.file_uploader("Choose photo from computer",type=["jpg","png"])
 
