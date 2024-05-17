@@ -2,7 +2,7 @@ import streamlit as st
 
 st.sidebar.title("Trash Classifier App")
 st.page_link("home.py",label="Home")
-st.page_link("app.py",label="Application")
+st.page_link("pages/app.py",label="Application")
 st.page_link("contributors.py",label="Contributors")
 #st.sidebar.markdown("# [Home](https://emtech-2-final-project-home.streamlit.app/)")
 #st.sidebar.markdown("# [Application](https://emtech-2-final-project-application.streamlit.app/)")
