@@ -20,7 +20,7 @@ background-size: cover;
 '''
 st.markdown(page_bg_img, unsafe_allow_html=True)
 
-st.markdown("# Main page 🎈")
+st.markdown("app.py")
 st.sidebar.markdown("# Application")
 
 st.title(':green[Trash Classifier App]')
